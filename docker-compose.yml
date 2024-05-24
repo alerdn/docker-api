@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    command: npm run start-nodemon
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/root/api/docker-api
+      - node_modules:/node_modules
+
+volumes:
+  node_modules: {}
